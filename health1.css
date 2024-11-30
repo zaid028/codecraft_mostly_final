@@ -1,0 +1,147 @@
+/* General Body Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #3b82f6, #9333ea);
+  color: white;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  margin-bottom: 20px;
+}
+
+.hero .btn {
+  padding: 12px 30px;
+  font-size: 1.2rem;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+}
+
+.hero .btn:hover {
+  background-color: #0d6efd;
+}
+
+/* Health Check Form Section */
+#healthCheck {
+  background-color: #f8f9fa;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.card {
+  border-radius: 10px;
+}
+
+.card-body {
+  padding: 30px;
+}
+
+h3 {
+  font-weight: 600;
+}
+
+form .form-control {
+  border-radius: 10px;
+  font-size: 1rem;
+}
+
+button {
+  font-size: 1.1rem;
+  padding: 12px;
+  border-radius: 50px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0d6efd;
+}
+
+/* Result Section */
+#result {
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 15px;
+  border-radius: 10px;
+  margin-top: 15px;
+  transition: background-color 0.3s ease;
+}
+
+/* Dynamic Result Class */
+#result.Warning {
+  background-color: #ffcc00;
+  color: black;
+}
+
+#result.Emergency {
+  background-color: #f44336;
+  color: white;
+}
+
+#result.Normal {
+  background-color: #4caf50;
+  color: white;
+}
+
+/* Chart Section */
+canvas {
+  width: 100%;
+  max-width: 600px;
+  height: 300px;
+  margin-top: 20px;
+}
+
+/* Footer Section */
+footer {
+  background-color: #212529;
+  padding: 20px 0;
+}
+
+footer p {
+  margin: 0;
+  font-size: 1rem;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* SOS Button Styling */
+/* SOS Button Styling and Positioning */
+/* SOS Button Styling and Positioning */
+#sosButton {
+  position: fixed;
+  bottom: 20px;  /* Distance from the bottom of the screen */
+  right: 20px;   /* Distance from the right edge of the screen */
+  background-color: #f44336;
+  color: white;
+  font-size: 1.5rem;  /* Increase the font size for the icon */
+  width: 60px;  /* Width of the button (circle size) */
+  height: 60px; /* Height of the button (circle size) */
+  border-radius: 50%;  /* Make it circular */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+  z-index: 9999;  /* Ensure the button is always on top */
+  border: none;  /* Remove border */
+}
+
+#sosButton:hover {
+  background-color: #d32f2f;
+}
+
+/* Optional: If you want an icon inside the button */
+#sosButton i {
+  font-size: 2rem; /* Adjust icon size */
+}
+
+
+

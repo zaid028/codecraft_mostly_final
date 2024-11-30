@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Health App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    /* General Styling */
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+      color: #333;
+    }
+
+    /* Header Section */
+    .header {
+      background-color: #32325d;
+      color: white;
+      padding: 60px 0;
+      text-align: center;
+    }
+    .header h1 {
+      font-size: 3rem;
+      margin: 0;
+      font-weight: 600;
+    }
+
+    /* Main Container */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 50px 20px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    /* Card Style */
+    .card {
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+      padding: 40px;
+      flex-basis: 30%;
+      text-align: center;
+      transition: transform 0.3s ease;
+      margin-bottom: 20px;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card h2 {
+      font-size: 1.5rem;
+      margin-bottom: 20px;
+      font-weight: 600;
+    }
+
+    .card p {
+      font-size: 1.2rem;
+      color: #6c757d;
+    }
+
+    .card button {
+      background-color: #5469d4;
+      color: white;
+      padding: 12px 40px;
+      border: none;
+      border-radius: 25px;
+      cursor: pointer;
+      font-size: 1.1rem;
+      transition: background-color 0.3s ease;
+    }
+
+    .card button:hover {
+      background-color: #4353b3;
+    }
+
+    /* Footer Section */
+    .footer {
+      background-color: #f8f9fa;
+      padding: 30px 20px;
+      text-align: center;
+      font-size: 1rem;
+      color: #6c757d;
+    }
+
+    .footer a {
+      color: #5469d4;
+      text-decoration: none;
+      margin: 0 15px;
+      font-size: 1.2rem;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* SOS Button - Bottom Right */
+    .sos-button {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      width: 80px;
+      height: 80px;
+      background-color: #e53e3e;
+      color: white;
+      border-radius: 50%;
+      font-size: 1.4rem;
+      font-weight: 700;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .sos-button:hover {
+      background-color: #c53030;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      .card {
+        flex-basis: 100%;
+        margin-bottom: 20px;
+      }
+      .header h1 {
+        font-size: 2.2rem;
+      }
+      .footer {
+        padding: 20px 10px;
+      }
+
+      /* Center the Pregnancy Information Card */
+      .container {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 1024px) {
+      .container {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .card:nth-child(2) {
+        order: 1; /* Ensure Pregnancy card is centered */
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <div class="header">
+    <h1>Health Emergency App</h1>
+  </div>
+
+  <!-- Main Container -->
+  <div class="container">
+    <div class="card">
+      <h2>Personal Details</h2>
+      <p>Enter your personal details and stay informed about your health.</p>
+      <button onclick="window.open('questions.html', '_blank')">Explore</button>
+    </div>
+
+    <!-- Pregnancy Information Centered -->
+    <div class="card" style="order: 2;">
+      <h2>Pregnancy Information</h2>
+      <p>Track your pregnancy details and stay informed.</p>
+      <button onclick="window.open('preg.html', '_blank')">Explore</button>
+    </div>
+
+    <div class="card">
+      <h2>Donor Information</h2>
+      <p>Find or register blood donors easily.</p>
+      <button onclick="window.open('tousif.html', '_blank')">Explore</button>
+    </div>
+  </div>
+
+  <!-- Footer Section -->
+  <div class="footer">
+    <a href="#home">Home</a>
+    <a href="#donor-info">Donor Info</a>
+    <a href="#pregnancy-info">Pregnancy Info</a>
+    <a href="#settings">Settings</a>
+  </div>
+
+  <!-- SOS Button -->
+  <div class="sos-button" onclick="triggerSOS()">
+    SOS
+  </div>
+
+  <!-- JavaScript for SOS Button -->
+  <script>
+    function triggerSOS() {
+      // Play the SOS sound (You can use your own sound file)
+      const audio = new Audio('https://www.soundjay.com/button/beep-07.wav'); // Placeholder sound
+      audio.play();
+
+      // Trigger a visual alert or notification
+      alert("SOS triggered! Notifications have been sent to your family and nearby hospitals.");
+    }
+  </script>
+
+</body>
+</html>
